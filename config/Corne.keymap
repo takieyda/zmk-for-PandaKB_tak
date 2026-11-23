@@ -277,119 +277,117 @@
         };
     };
 
-    / {
-        keymap {
-            compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-            // QWERTY base layer with home-row mods and an ESC tap / NAV hold key.
-            qwerty {
-                // -----------------------------------------------------------------------------------------
-                // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-                // |ESCNAV|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-                // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
-                //                    | WIN | ALT |SPC/L|   |ENT/R| CTRL | ALT |
-                bindings = <
-                    &kp TAB             &kp Q         &kp W         &kp E        &kp R        &kp T   &kp Y   &kp U        &kp I        &kp O         &kp P            &kp BSPC
-                    &nrgbt NAVCLR ESC   &hml LSHFT A  &hml LCTRL S  &hml LGUI D  &hml LALT F  &kp G   &kp H   &hmr RALT J  &hmr RGUI K  &hmr RCTRL L  &hmr RSHFT SEMI  &kp SQT
-                    &shift_caps LSHFT 0 &kp Z         &kp X         &kp C        &kp V        &kp B   &kp N   &kp M        &kp COMMA    &kp DOT       &kp FSLH         &kp RET
-                    &kp LGUI  &kp LALT  &lrgbt LWRCLR SPACE  &rrgbt RSECLR RET  &kp RCTRL  &kp RALT
-                >;
-            };
+        // QWERTY base layer with home-row mods and an ESC tap / NAV hold key.
+        qwerty {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // |ESCNAV|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
+            //                    | WIN | ALT |SPC/L|   |ENT/R| CTRL | ALT |
+            bindings = <
+                &kp TAB             &kp Q         &kp W         &kp E        &kp R        &kp T   &kp Y   &kp U        &kp I        &kp O         &kp P            &kp BSPC
+                &nrgbt NAVCLR ESC   &hml LSHFT A  &hml LCTRL S  &hml LGUI D  &hml LALT F  &kp G   &kp H   &hmr RALT J  &hmr RGUI K  &hmr RCTRL L  &hmr RSHFT SEMI  &kp SQT
+                &shift_caps LSHFT 0 &kp Z         &kp X         &kp C        &kp V        &kp B   &kp N   &kp M        &kp COMMA    &kp DOT       &kp FSLH         &kp RET
+                &kp LGUI  &kp LALT  &lrgbt LWRCLR SPACE  &rrgbt RSECLR RET  &kp RCTRL  &kp RALT
+            >;
+        };
 
-            // Colemak base layer.
-            colemak {
-                // -----------------------------------------------------------------------------------------
-                // |  TAB |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
-                // |ESCNAV|  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  |  '   |
-                // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  | ENT  |
-                //                    | GUI | ALT |SPC/L|   |ENT/R| CTRL | ALT |
-                bindings = <
-                    &kp TAB             &kp Q         &kp W         &kp F        &kp P        &kp G   &kp J   &kp L        &kp U        &kp Y         &kp SEMI       &kp BSPC
-                    &nrgbt NAVCLR ESC   &hml LSHFT A  &hml LCTRL R  &hml LGUI S  &hml LALT T  &kp D   &kp H   &hmr RALT N  &hmr RGUI E  &hmr RCTRL I  &hmr RSHFT O   &kp SQT
-                    &shift_caps LSHFT 0 &kp Z         &kp X         &kp C        &kp V        &kp B   &kp K   &kp M        &kp COMMA    &kp DOT       &kp FSLH       &kp RET
-                    &kp LGUI  &kp LALT  &lrgbt LWRCLR SPACE  &rrgbt RSECLR RET  &kp RCTRL  &kp RALT
-                >;
-            };
+        // Colemak base layer.
+        colemak {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
+            // |ESCNAV|  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  | ENT  |
+            //                    | GUI | ALT |SPC/L|   |ENT/R| CTRL | ALT |
+            bindings = <
+                &kp TAB             &kp Q         &kp W         &kp F        &kp P        &kp G   &kp J   &kp L        &kp U        &kp Y         &kp SEMI       &kp BSPC
+                &nrgbt NAVCLR ESC   &hml LSHFT A  &hml LCTRL R  &hml LGUI S  &hml LALT T  &kp D   &kp H   &hmr RALT N  &hmr RGUI E  &hmr RCTRL I  &hmr RSHFT O   &kp SQT
+                &shift_caps LSHFT 0 &kp Z         &kp X         &kp C        &kp V        &kp B   &kp K   &kp M        &kp COMMA    &kp DOT       &kp FSLH       &kp RET
+                &kp LGUI  &kp LALT  &lrgbt LWRCLR SPACE  &rrgbt RSECLR RET  &kp RCTRL  &kp RALT
+            >;
+        };
 
-            // Lower: symbols, F-keys, Delete, and media controls; the right inner thumb accesses Raise/Adjust.
-            lower {
-                // -----------------------------------------------------------------------------------------
-                // |  ~  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
-                // | DEL | F1  | F2  | F3  | F4  | F5  |   | F6  |  _  |  +  |  {  |  }  | PIPE |
-                // |     | F7  | F8  | F9  | F10 | F11 |   | F12 |     |     |     |     |      |
-                //                   |     |     |     |   |ENT/R|NEXT |PLAY |
-                bindings = <
-                    &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp DEL
-                    &kp DEL    &kp F1    &kp F2  &kp F3    &kp F4    &kp F5     &kp F6     &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
-                    &trans     &kp F7    &kp F8  &kp F9    &kp F10   &kp F11    &kp F12    &trans     &trans     &trans    &trans    &trans
-                    &trans  &trans  &trans  &rrgbt ADJCLR RET  &kp C_NEXT  &kp C_PP
-                >;
-            };
+        // Lower: symbols, F-keys, Delete, and media controls; the right inner thumb accesses Raise/Adjust.
+        lower {
+            // -----------------------------------------------------------------------------------------
+            // |  ~  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
+            // | DEL | F1  | F2  | F3  | F4  | F5  |   | F6  |  _  |  +  |  {  |  }  | PIPE |
+            // |     | F7  | F8  | F9  | F10 | F11 |   | F12 |     |     |     |     |      |
+            //                   |     |     |     |   |ENT/R|NEXT |PLAY |
+            bindings = <
+                &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp DEL
+                &kp DEL    &kp F1    &kp F2  &kp F3    &kp F4    &kp F5     &kp F6     &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+                &trans     &kp F7    &kp F8  &kp F9    &kp F10   &kp F11    &kp F12    &trans     &trans     &trans    &trans    &trans
+                &trans  &trans  &trans  &rrgbt ADJCLR RET  &kp C_NEXT  &kp C_PP
+            >;
+        };
 
-            // Raise: numbers, symbols and punctuation.
-            raise {
-                // -----------------------------------------------------------------------------------------
-                // | GRV |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-                // | DEL |     |     |     |     | PGUP|   | HOME|  -  |  =  |  [  |  ]  |  \   |
-                // |     |     |     |     |     | PGDN|   | END |     |     |     |     |      |
-                //                   |     |     |SPC/L|   |     |     |     |
-                bindings = <
-                    &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6    &kp N7     &kp N8     &kp N9    &kp N0    &kp BSPC
-                    &kp DEL    &trans  &trans  &trans  &trans  &kp PG_UP  &kp HOME  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH
-                    &trans     &trans  &trans  &trans  &trans  &kp PG_DN  &kp END   &trans     &trans     &trans    &trans    &trans
-                    &trans  &trans  &lrgbt ADJCLR SPACE  &trans  &trans  &trans
-                >;
-            };
+        // Raise: numbers, symbols and punctuation.
+        raise {
+            // -----------------------------------------------------------------------------------------
+            // | GRV |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | DEL |     |     |     |     | PGUP|   | HOME|  -  |  =  |  [  |  ]  |  \   |
+            // |     |     |     |     |     | PGDN|   | END |     |     |     |     |      |
+            //                   |     |     |SPC/L|   |     |     |     |
+            bindings = <
+                &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6    &kp N7     &kp N8     &kp N9    &kp N0    &kp BSPC
+                &kp DEL    &trans  &trans  &trans  &trans  &kp PG_UP  &kp HOME  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH
+                &trans     &trans  &trans  &trans  &trans  &kp PG_DN  &kp END   &trans     &trans     &trans    &trans    &trans
+                &trans  &trans  &lrgbt ADJCLR SPACE  &trans  &trans  &trans
+            >;
+        };
 
-            // Adjust is active while Lower and Raise are both held.
-            adjust {
-                // -----------------------------------------------------------------------------------------
-                // |      | BOOT|     |     |     |     |   |     |     |     |     |     | DEL  |
-                // | BTCLR| BT 0| BT 1| BT 2| BT 3|     |   |     |QWERT|CLMAK|     |     |      |
-                // |      |     |     |     |     |     |   |     | INS |PRSCR| SLCK|PAUSE|      |
-                //                    |     |     |     |   |     |     |     |
-                bindings = <
-                    &trans      &bootloader   &trans        &trans        &trans        &trans  &trans  &trans   &trans     &trans    &trans           &kp DEL
-                    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans  &to 0    &to 1      &trans    &trans           &trans
-                    &trans      &trans        &trans        &trans        &trans        &trans  &trans  &kp INS  &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &trans
-                    &trans  &trans  &trans  &trans  &trans  &trans
-                >;
-            };
+        // Adjust is active while Lower and Raise are both held.
+        adjust {
+            // -----------------------------------------------------------------------------------------
+            // |      | BOOT|     |     |     |     |   |     |     |     |     |     | DEL  |
+            // | BTCLR| BT 0| BT 1| BT 2| BT 3|     |   |     |QWERT|CLMAK|     |     |      |
+            // |      |     |     |     |     |     |   |     | INS |PRSCR| SLCK|PAUSE|      |
+            //                    |     |     |     |   |     |     |     |
+            bindings = <
+                &trans      &bootloader   &trans        &trans        &trans        &trans  &trans  &trans   &trans     &trans    &trans           &kp DEL
+                &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans  &to 0    &to 1      &trans    &trans           &trans
+                &trans      &trans        &trans        &trans        &trans        &trans  &trans  &kp INS  &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
 
-            // NAV: Delete, volume/mute, and arrow keys; holding ESCNAV selects it and shows the NAV color.
-            nav {
-                // -----------------------------------------------------------------------------------------
-                // |     |     |     |     |     |     |   |     |     |     |     |     | DEL |
-                // |     |     |VOL- |VOL+ |MUTE |     |   |LEFT |DOWN | UP  |RIGHT|     |     |
-                // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-                //                   |     |     |     |   |     |     |     |
-                bindings = <
-                    &trans  &trans  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DEL
-                    &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &trans    &trans
-                    &trans  &trans  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                    &trans  &trans  &trans        &trans        &trans  &trans
-                >;
-            };
+        // NAV: Delete, volume/mute, and arrow keys; holding ESCNAV selects it and shows the NAV color.
+        nav {
+            // -----------------------------------------------------------------------------------------
+            // |     |     |     |     |     |     |   |     |     |     |     |     | DEL |
+            // |     |     |VOL- |VOL+ |MUTE |     |   |LEFT |DOWN | UP  |RIGHT|     |     |
+            // |     |     |     |     |     |     |   |     |     |     |     |     |     |
+            //                   |     |     |     |   |     |     |     |
+            bindings = <
+                &trans  &trans  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DEL
+                &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &trans    &trans
+                &trans  &trans  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans        &trans        &trans  &trans
+            >;
+        };
 
-            // RGB test palette: hues sweep across columns; each row uses different saturation/brightness.
-            rgb {
-                bindings = <
-                    &rgb_ug RGB_COLOR_HSB(0,80,60)  &rgb_ug RGB_COLOR_HSB(20,80,60)  &rgb_ug RGB_COLOR_HSB(40,80,60)     &rgb_ug RGB_COLOR_HSB(60,80,60)   &rgb_ug RGB_COLOR_HSB(80,80,60)   &rgb_ug RGB_COLOR_HSB(100,80,60)    &rgb_ug RGB_COLOR_HSB(120,80,60)  &rgb_ug RGB_COLOR_HSB(140,80,60)  &rgb_ug RGB_COLOR_HSB(160,80,60)  &rgb_ug RGB_COLOR_HSB(180,80,60)  &rgb_ug RGB_COLOR_HSB(200,80,60)  &rgb_ug RGB_COLOR_HSB(220,80,60)
-                    &rgb_ug RGB_COLOR_HSB(0,60,40)  &rgb_ug RGB_COLOR_HSB(20,60,40)  &rgb_ug RGB_COLOR_HSB(40,60,40)     &rgb_ug RGB_COLOR_HSB(60,60,40)   &rgb_ug RGB_COLOR_HSB(80,60,40)   &rgb_ug RGB_COLOR_HSB(100,60,40)    &rgb_ug RGB_COLOR_HSB(120,60,40)  &rgb_ug RGB_COLOR_HSB(140,60,40)  &rgb_ug RGB_COLOR_HSB(160,60,40)  &rgb_ug RGB_COLOR_HSB(180,60,40)  &rgb_ug RGB_COLOR_HSB(200,60,40)  &rgb_ug RGB_COLOR_HSB(220,60,40)
-                    &rgb_ug RGB_COLOR_HSB(0,80,30)  &rgb_ug RGB_COLOR_HSB(20,80,30)  &rgb_ug RGB_COLOR_HSB(40,80,30)     &rgb_ug RGB_COLOR_HSB(60,80,30)   &rgb_ug RGB_COLOR_HSB(80,80,30)   &rgb_ug RGB_COLOR_HSB(100,80,30)    &rgb_ug RGB_COLOR_HSB(120,80,30)  &rgb_ug RGB_COLOR_HSB(140,80,30)  &rgb_ug RGB_COLOR_HSB(160,80,30)  &rgb_ug RGB_COLOR_HSB(180,80,30)  &rgb_ug RGB_COLOR_HSB(200,80,30)  &rgb_ug RGB_COLOR_HSB(220,80,30)
-                    &trans                          &trans                           &trans                              &trans                            &trans                            &trans
-                >;
-            };
+        // RGB test palette: hues sweep across columns; each row uses different saturation/brightness.
+        rgb {
+            bindings = <
+                &rgb_ug RGB_COLOR_HSB(0,80,60)  &rgb_ug RGB_COLOR_HSB(20,80,60)  &rgb_ug RGB_COLOR_HSB(40,80,60)     &rgb_ug RGB_COLOR_HSB(60,80,60)   &rgb_ug RGB_COLOR_HSB(80,80,60)   &rgb_ug RGB_COLOR_HSB(100,80,60)    &rgb_ug RGB_COLOR_HSB(120,80,60)  &rgb_ug RGB_COLOR_HSB(140,80,60)  &rgb_ug RGB_COLOR_HSB(160,80,60)  &rgb_ug RGB_COLOR_HSB(180,80,60)  &rgb_ug RGB_COLOR_HSB(200,80,60)  &rgb_ug RGB_COLOR_HSB(220,80,60)
+                &rgb_ug RGB_COLOR_HSB(0,60,40)  &rgb_ug RGB_COLOR_HSB(20,60,40)  &rgb_ug RGB_COLOR_HSB(40,60,40)     &rgb_ug RGB_COLOR_HSB(60,60,40)   &rgb_ug RGB_COLOR_HSB(80,60,40)   &rgb_ug RGB_COLOR_HSB(100,60,40)    &rgb_ug RGB_COLOR_HSB(120,60,40)  &rgb_ug RGB_COLOR_HSB(140,60,40)  &rgb_ug RGB_COLOR_HSB(160,60,40)  &rgb_ug RGB_COLOR_HSB(180,60,40)  &rgb_ug RGB_COLOR_HSB(200,60,40)  &rgb_ug RGB_COLOR_HSB(220,60,40)
+                &rgb_ug RGB_COLOR_HSB(0,80,30)  &rgb_ug RGB_COLOR_HSB(20,80,30)  &rgb_ug RGB_COLOR_HSB(40,80,30)     &rgb_ug RGB_COLOR_HSB(60,80,30)   &rgb_ug RGB_COLOR_HSB(80,80,30)   &rgb_ug RGB_COLOR_HSB(100,80,30)    &rgb_ug RGB_COLOR_HSB(120,80,30)  &rgb_ug RGB_COLOR_HSB(140,80,30)  &rgb_ug RGB_COLOR_HSB(160,80,30)  &rgb_ug RGB_COLOR_HSB(180,80,30)  &rgb_ug RGB_COLOR_HSB(200,80,30)  &rgb_ug RGB_COLOR_HSB(220,80,30)
+                &trans                          &trans                           &trans                              &trans                            &trans                            &trans
+            >;
+        };
 
-            // Autoshift layer: letters use the autoshift behavior; other keys pass through.
-            autoshift {
-                bindings = <
-                    &trans  &as Q   &as W     &as E   &as R   &as T     &as Y   &as U   &as I   &as O   &as P   &trans
-                    &trans  &as A   &as S     &as D   &as F   &as G     &as H   &as J   &as K   &as L   &trans  &trans
-                    &trans  &as Z   &as X     &as C   &as V   &as B     &as N   &as M   &trans  &trans  &trans  &trans
-                    &trans  &trans  &trans    &trans  &trans  &trans
-                >;
-            };
+        // Autoshift layer: letters use the autoshift behavior; other keys pass through.
+        autoshift {
+            bindings = <
+                &trans  &as Q   &as W     &as E   &as R   &as T     &as Y   &as U   &as I   &as O   &as P   &trans
+                &trans  &as A   &as S     &as D   &as F   &as G     &as H   &as J   &as K   &as L   &trans  &trans
+                &trans  &as Z   &as X     &as C   &as V   &as B     &as N   &as M   &trans  &trans  &trans  &trans
+                &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 };
